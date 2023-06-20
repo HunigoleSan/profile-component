@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    
 }
 
 .imagesDisplay{
@@ -26,10 +26,12 @@
 .img1{
     top:-50%;
     left: -25%;
+    transition: .5s all;
 }
 .img2{
     top: 50%;
     right: -25%;
+    transition: .5s all;
 }
 .profile{
     display: flex;
@@ -115,7 +117,10 @@ b{
 /* ATTRIBUTION */
 .attribution{
     position: absolute;
-    top: 95%;
+    top: 93%;
+    padding: 0px 15px;
+    text-align: center;
+    
 }
 .attribution > a {
     text-decoration: none;
@@ -127,4 +132,76 @@ b{
     color: red;
     text-shadow: 10px 10px 10px red;
     transition: .5s all;
+}
+/**/
+
+[data-title] {
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+[data-title]:after {
+    content: attr(data-title);
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-family: Kano;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 25px;
+    top: -170%;
+    bottom: -1.6em;
+    left: 110%;  
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 6px;
+
+}
+[data-title]::before {
+    content: '';
+    width: 0;
+    height: 0px;
+    position: absolute;
+    visibility: hidden;
+    border-bottom: 20px solid #333;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: rotate(-135deg);
+    top: -90%;
+    left: 100%;
+    z-index: 99999;
+    opacity: 0;
+
+}
+[data-title]:hover:after {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+[data-title]:hover::before {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+@media screen and (max-width: 375px){
+    .img1{
+        left: -200%;
+        top: -50%;
+        
+        
+        transition: .5s all;
+    }
+    .img2{
+        right: -200%;
+        top: 50%;
+        transition: .5s all;
+    }
 }
