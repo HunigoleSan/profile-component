@@ -1,6 +1,6 @@
 [# Frontend Mentor - Profile card component](https://hunigolesan.github.io/profile-component/)
 
-![Design preview for the Profile card component coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Profile card component coding challenge](./design/my_result.PNG)
 
 ## Welcome! 👋
 
